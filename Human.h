@@ -12,6 +12,7 @@ protected:
 public:
 	int getCharges();
 	int getChoice();
+  void setChoice(int choice);
 	virtual void Pick();
 };
 
