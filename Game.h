@@ -14,7 +14,7 @@ private:
 public:
     void play();
     void endGame();
-    bool logic(); //lawrence's sick ass placeholder game mechanicssssss
+    bool logic(int player1,int player2); //lawrence's sick ass placeholder game mechanicssssss
 };
 
 #endif

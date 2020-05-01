@@ -7,8 +7,8 @@ using namespace std;
 class Human
 {
 protected:
-	int choice;
-	int charges;
+	int choices;
+	int charges = 0;
 public:
 	int getCharges();
 	int getChoice();
