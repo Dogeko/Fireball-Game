@@ -1,13 +1,8 @@
-#include <ctype.h>
-#include <string.h>
 #include "Game.h"
-#include "Human.h"
-#include "PlayerFactory.h"
+
 void Game::play()
 {
     // cout << "Press 1 if you want to play against a bot"
-//    Human p1;
-//    Human p2;
     player1 = PlayerFactory::pickPlayer(1);
     player2 = PlayerFactory::pickPlayer(2);
     winner = NULL;
@@ -17,29 +12,28 @@ void Game::play()
         player1->pick();
         player2->pick();
 
-        cout<<"Player 1 chose "<<player1->getChoice()<<" vs "<<"Player 2 chose "<<player2->getChoice()<<endl;
+        cout << "Player 1 chose " << player1->getChoice() << " vs " << "Player 2 chose " << player2->getChoice() << endl;
 
         winner = logic(player1, player2);
     }
 
-    if(winner == player1){
-
+    if(winner == player1)
+    {
       score.incrementP1();
-
     }
-    else{
+    else
+    {
       score.incrementP2();
     }
     char answer;
     cout << "Do you want to play again? Press Y to play again. ANY OTHER KEY WILL END THE GAME LMAO" << endl;
     cin >> answer;
-    if(tolower(answer) == 'y') //this is java
+    if(tolower(answer) == 'y')
     {
-//      delete player1;
-//      delete player2;
       play();
     }
-    else{
+    else
+    {
       cout << "GAME OVER LOSER" << endl;
       score.displayResults();
     }
@@ -69,9 +63,10 @@ Player* Game::logic(Player* p1, Player* p2)
         cout << "Player two is Bruce Lee" << endl;
         return p2;
     }
-    else{
+    else
+    {
 
-        if(p1->getChoice() == 4 && p2->getChoice() ==4)
+        if(p1->getChoice() == 4 && p2->getChoice() == 4)
         {
                 cout << "start RPS!!!" << endl;
         }

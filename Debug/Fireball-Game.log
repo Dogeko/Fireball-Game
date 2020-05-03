@@ -1,6 +1,6 @@
 ﻿  Fireball.cpp
   Game.cpp
-C:\Users\Darren\source\repos\Fireball-Game\Game.cpp(58,17): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
-C:\Users\Darren\source\repos\Fireball-Game\Game.cpp(58,17): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
+C:\Users\Darren\source\repos\Fireball-Game\Game.cpp(77,17): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+C:\Users\Darren\source\repos\Fireball-Game\Game.cpp(77,17): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
   Generating Code...
   Fireball-Game.vcxproj -> C:\Users\Darren\source\repos\Fireball-Game\Debug\Fireball-Game.exe
