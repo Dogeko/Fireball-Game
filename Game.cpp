@@ -8,8 +8,8 @@ void Game::play()
 //    Human p2;
     player1 = PlayerFactory::pickPlayer(1);
     player2 = PlayerFactory::pickPlayer(2);
-    bool check = false;
-    while (!check)
+    winner = null;
+    while (winner == null)
     {
         player1->pick();
         cout << "Player 1 choose" << player1->getChoice() << endl;
@@ -19,31 +19,52 @@ void Game::play()
 //        cout<< "player 2 choose" << p2.getChoice() << endl;
         cout << "Player 2 choose" << player2->getChoice() << endl;
 //        check = logic(p1.getChoice(), p2.getChoice());
-        check = logic(player1->getChoice(), player2->getChoice());
+        winner = logic(player1, player2);
     }
+    if(winner == player1){
+      score.incrementP1();
+    }
+    else{
+      score.incrementP2();
+    }
+    char answer;
+    cout << "Do you want to play again? Press Y to play again. ANY OTHER KEY WILL END THE GAME LMAO" << endl;
+    cin >> answer;
+    if(answer.toLower() = 'y') //this is java
+    {
+      delete player1;
+      delete player2;
+      play();
+    }
+    else{
+      cout << "GAME OVER LOSER" << endl;
+      score.displayResults();
+    }
+
+    
 }
 
-bool Game::logic(int p1Choice, int p2Choice)
+player Game::logic(Player p1, Player p2)
 {
-    if (p1Choice == 3 && p2Choice == 1)
+    if (p1.getChoice() == 3 && p2.getChoice() == 1)
     {
         cout << "Player one fried Player 2" << endl;
-        return true;
+        return p1;
     }
-    else if (p1Choice == 1 && p2Choice == 3)
+    else if (p1.getChoice() == 1 && p2.getChoice() == 3)
     {
         cout << "Player two fried Player one" << endl;
-        return true;
+        return p2;
     }
-    else if (p1Choice == 4 && p2Choice != 4)
+    else if (p1.getChoice() == 4 && p2.getChoice() != 4)
     {
         cout << "Player one is Bruce Lee" << endl;
-        return true;
+        return p1;
     }
-    else if (p1Choice != 4 && p2Choice == 4)
+    else if (p1.getChoice() != 4 && p2.getChoice() == 4)
     {
         cout << "Player two is Bruce Lee" << endl;
-        return true;
+        return p2;
     }
     else{
 
@@ -67,6 +88,6 @@ bool Game::logic(int p1Choice, int p2Choice)
         {
             cout << "p2 blocked p1's fireball" << endl;
         }
-        return false;
+        return null;
     }
 }
