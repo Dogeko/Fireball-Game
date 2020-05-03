@@ -16,13 +16,12 @@ using namespace std;
 
 class HumanPlayer;
 
-class HumanOneChargeState : public HumanState{
+class HumanOneChargeState : public HumanState
+{
 private:
 	HumanPlayer *player;
 public:
-	HumanOneChargeState(HumanPlayer *pl) : player(pl){
-
-	}
+	HumanOneChargeState(HumanPlayer *pl) : player(pl) {}
 
 	virtual ~HumanOneChargeState(){}
 

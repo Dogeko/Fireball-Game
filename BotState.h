@@ -8,8 +8,9 @@
 #ifndef BOTSTATE_H_
 #define BOTSTATE_H_
 
-class BotState{
-
+class BotState
+{
+public:
 	BotState() {}
 	virtual ~BotState() {}
 

@@ -10,9 +10,8 @@
 
 #include <iostream>
 #include "Player.h"
-#include "Human.h"
 #include "HumanPlayer.h"
-//#include "Bot.h"
+#include "BotPlayer.h"
 using namespace std;
 
 class PlayerFactory : public Player{

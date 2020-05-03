@@ -15,7 +15,7 @@ Player *PlayerFactory::pickPlayer(char opponent){
 			return new HumanPlayer();
 
 		case 2:
-//			return Bot();
+			return new BotPlayer();
 
 		default:
 			return new HumanPlayer();

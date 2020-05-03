@@ -13,7 +13,7 @@ int HumanThreeChargeState::handle(){
 		int move;
 
 		cout<<"Make your move"<<endl;
-		cout<<"1  = Charge 2 = Shield 3 = Fireball 4 = ORA ORA ORA"<<endl;
+		cout<<"1 = Charge 2 = Shield 3 = Fireball 4 = ORA ORA ORA"<<endl;
 		cin >> move;
 
 

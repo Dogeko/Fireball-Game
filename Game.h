@@ -12,8 +12,9 @@ using namespace std;
 class Game
 {
 private:
-    Human human;
-    Bot* bot;
+//    Human human;
+//    Bot* bot;
+    Player* player1;
     Player* player2;
 public:
     void play();

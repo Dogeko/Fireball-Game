@@ -19,12 +19,13 @@
 
 using namespace std;
 
-class HumanPlayer : public Player{
+class HumanPlayer : public Player
+{
 private:
-	HumanState *no_charge_state;
-	HumanState *one_charge_state;
-	HumanState *two_charge_state;
-	HumanState *three_charge_state;
+	HumanState* no_charge_state;
+	HumanState* one_charge_state;
+	HumanState* two_charge_state;
+	HumanState* three_charge_state;
 public:
 	HumanState *state;
 
@@ -36,11 +37,14 @@ public:
 	{
 		state = no_charge_state;
 	}
-	void pick(){
+	
+	void pick()
+	{
 
 		setChoice(state->handle());
 
 	}
+	
 	virtual ~HumanPlayer()
 	{
 		delete no_charge_state;
@@ -49,6 +53,7 @@ public:
 		delete three_charge_state;
 
 	}
+	
 	HumanState *get_state() const { return state; }
 
 	void set_state(HumanState *st) { state = st; }
