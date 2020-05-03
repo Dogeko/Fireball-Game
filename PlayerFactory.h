@@ -11,26 +11,14 @@
 #include <iostream>
 #include "Player.h"
 #include "Human.h"
+#include "HumanPlayer.h"
 //#include "Bot.h"
 using namespace std;
 
 class PlayerFactory : public Player{
 
 public:
-	static Player *pickPlayer(char opponent){
-
-		switch(opponent){
-
-		case 1:
-			return Human();
-
-		case 2:
-//			return Bot();
-
-		default:
-			return Human();
-		}
-	}
+	static Player *pickPlayer(char opponent);
 
 };
 

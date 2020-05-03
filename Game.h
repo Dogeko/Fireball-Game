@@ -3,6 +3,9 @@
 
 #include "Human.h"
 #include "Bot.h"
+#include "Player.h"
+#include "PlayerFactory.h"
+
 #include <iostream>
 using namespace std;
 
@@ -11,6 +14,7 @@ class Game
 private:
     Human human;
     Bot* bot;
+    Player* player2;
 public:
     void play();
     void endGame();

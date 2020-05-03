@@ -28,9 +28,7 @@ public:
 		choice = Choices;
 	}
 
-	virtual void pick(){
-
-	}
+	virtual void pick() = 0;
 };
 
 #endif /* PLAYER_H_ */

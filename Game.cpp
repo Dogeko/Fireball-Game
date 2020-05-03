@@ -1,19 +1,23 @@
 #include "Game.h"
 #include "Human.h"
-
+#include "PlayerFactory.h"
 void Game::play()
 {
     // cout << "Press 1 if you want to play against a bot"
     Human p1;
-    Human p2;
+//    Human p2;
+    player2 = PlayerFactory::pickPlayer(1);
     bool check = false;
     while (!check)
     {
         p1.Pick();
         cout<< "player 1 choose" << p1.getChoice() << endl;
-        p2.Pick();
-        cout<< "player 2 choose" << p2.getChoice() << endl;
-        check = logic(p1.getChoice(), p2.getChoice());
+//        p2.Pick();
+        player2->pick();
+//        cout<< "player 2 choose" << p2.getChoice() << endl;
+        cout<< "player 2 choose" << player2->getChoice() << endl;
+//        check = logic(p1.getChoice(), p2.getChoice());
+        check = logic(p1.getChoice(), player2->getChoice());
     }
 }
 

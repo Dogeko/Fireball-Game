@@ -2,9 +2,11 @@
 #define BOT_H
 
 #include <iostream>
+#include "Player.h"
+
 using namespace std;
 
-class Bot
+class Bot : public Player
 {
 protected:
 	int charges;
@@ -13,7 +15,7 @@ public:
 	int getCharges();
 	int getChoice();
 	void setChoice(int choice);
-	virtual void pick();
+	void pick();
 };
 
 #endif
