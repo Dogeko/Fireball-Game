@@ -2,12 +2,12 @@
 
 void Results::incrementP1()
 {
-	P1Score++;
+	P1Score = P1Score + 1;
 }
 
 void Results::incrementP2()
 {
-	P2Score++;
+	P2Score = P2Score + 1;;
 }
 
 void Results::displayResults()

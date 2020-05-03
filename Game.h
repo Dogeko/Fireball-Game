@@ -15,14 +15,14 @@ class Game
 private:
 //    Human human;
 //    Bot* bot;
-    Results* score;
+    Results score;
     Player* player1;
     Player* player2;
     Player* winner;
 public:
     void play();
     void endGame();
-    bool logic(int player1,int player2); //lawrence's sick ass placeholder game mechanicssssss
+    Player* logic(Player* player1, Player* player2); //lawrence's sick ass placeholder game mechanicssssss
 };
 
 #endif
