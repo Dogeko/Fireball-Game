@@ -4,7 +4,7 @@
 int BotOneChargeState::handle()
 {
 	int move;
-
+  cout << "The Bot has 1 charge" << endl; 
 	cout << "Bot makes a move" << endl;
 	move = rand() % 3 + 1;
 	

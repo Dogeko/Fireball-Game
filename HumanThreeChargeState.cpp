@@ -13,6 +13,7 @@ int HumanThreeChargeState::handle(){
 		int move;
 
 		cout<<"Make your move"<<endl;
+    cout << "You have 3 charges" << endl;
 		cout<<"1 = Charge\n2 = Shield\n3 = Fireball\n4 = Karate Chop"<<endl;
 		cin >> move;
 

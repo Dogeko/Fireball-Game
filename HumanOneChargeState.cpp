@@ -14,7 +14,7 @@ int HumanOneChargeState::handle(){
 		int move;
 
 		cout<<"Make your move"<<endl;
-
+    cout << "You have 1 charge" << endl;
 		cout<<"1 = Charge\n2 = Shield\n3 = Fireball \n4 = Karate Chop(LOCKED: Need 2 more charges)"<<endl;
 		cin >> move;
 

@@ -14,6 +14,7 @@ int HumanNoChargeState::handle(){
 		int move;
 
 		cout<<"Make your move"<<endl;
+    cout << "You have no charges" << endl;
 		cout<<"1 = Charge\n2 = Shield\n3 = Fireball (LOCKED: Need 1 more charge)\n4 = Karate Chop(LOCKED: Need 3 more charges)"<<endl;
 
 		cin >> move;

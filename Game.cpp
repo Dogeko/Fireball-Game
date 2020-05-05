@@ -3,8 +3,14 @@
 void Game::play()
 {
     // cout << "Press 1 if you want to play against a bot"
+    cout << "Welcome to Fireball" << endl;
+    cout << "Press 1 if you want to play against a human" << endl;
+    cout << "Press 2 if you want to play against a bot." << endl;
+    int opponent;
+    cin >> opponent;
+
     player1 = PlayerFactory::pickPlayer(1);
-    player2 = PlayerFactory::pickPlayer(2);
+    player2 = PlayerFactory::pickPlayer(opponent);
     winner = NULL;
 
     while (winner == NULL)
@@ -85,6 +91,10 @@ Player* Game::logic(Player* p1, Player* p2)
         else if (p1->getChoice() == 3 && p2->getChoice() == 2)
         {
             cout << "p2 blocked p1's fireball" << endl;
+        }
+        else if(p1->getChoice() == 3 && p2->getChoice() == 3)
+        {
+            cout << "Your fireballs made a fireball. Nothing happened" << endl;
         }
         return NULL;
     }
