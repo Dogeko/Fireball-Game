@@ -28,6 +28,16 @@ public:
 		choice = Choices;
 	}
 
+	int getCharges(){
+
+		return charges;
+	}
+
+	void setCharges(int Charge){
+
+		charges = Charge;
+	}
+
 	virtual void pick() = 0;
 };
 

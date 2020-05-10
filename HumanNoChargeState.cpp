@@ -13,9 +13,8 @@ int HumanNoChargeState::handle(){
 
 		int move;
 
+		cout<<"|1 = Charge|2 = Shield|3 = Fireball (LOCKED: Need 1 more charge)|4 = Karate Chop(LOCKED: Need 3 more charges)|"<<endl;
 		cout<<"Make your move"<<endl;
-    cout << "You have no charges" << endl;
-		cout<<"1 = Charge\n2 = Shield\n3 = Fireball (LOCKED: Need 1 more charge)\n4 = Karate Chop(LOCKED: Need 3 more charges)"<<endl;
 
 		cin >> move;
 
@@ -40,6 +39,7 @@ int HumanNoChargeState::handle(){
 
 		if(move == 1){
 			player->set_state(player->get_one_charge_state());
+			player->setCharges(1);
 		}
 
 		return move;

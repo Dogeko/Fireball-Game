@@ -12,9 +12,10 @@ int HumanThreeChargeState::handle(){
 
 		int move;
 
+		cout<<"|1 = Charge|2 = Shield|3 = Fireball|4 = Karate Chop|"<<endl;
 		cout<<"Make your move"<<endl;
-    cout << "You have 3 charges" << endl;
-		cout<<"1 = Charge\n2 = Shield\n3 = Fireball\n4 = Karate Chop"<<endl;
+
+
 		cin >> move;
 
 		while(move > 4){
@@ -27,9 +28,11 @@ int HumanThreeChargeState::handle(){
 
 		if(move == 3){
 			player->set_state(player->get_two_charge_state());
+			player->setCharges(2);
 		}
 		else if(move == 4){
 			player->set_state(player->get_no_charge_state());
+			player->setCharges(0);
 		}
 		return move;
 	}

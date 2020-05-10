@@ -22,6 +22,7 @@ private:
     Player* winner;
 public:
     void play();
+    void menu();
     Player* logic(Player* player1, Player* player2); //lawrence's sick ass placeholder game mechanicssssss
 };
 
