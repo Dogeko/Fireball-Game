@@ -30,7 +30,9 @@ void Game::play()
     {
     	cout<<"Player 1's Charges:"<<player1->getCharges()<<"  "<<"Player 2's Charges:"<<player2->getCharges()<<endl;
 
+    	cout<<"Player 1 Make your move"<<endl;
         player1->pick();
+        cout<<"Player 2 Make your move"<<endl;
         player2->pick();
 
         winner = logic(player1, player2);
@@ -142,7 +144,7 @@ Player* Game::logic(Player* p1, Player* p2)
         }
         else if ((p1->getChoice() == 1|2) && (p2->getChoice() == 1|2))
         {
-            cout << "Both players did NOT attack nothing happened" << endl;
+            cout << "nothing happened" << endl;
         }
         else if (p1->getChoice() == 2 && p2->getChoice() == 3)
         {
